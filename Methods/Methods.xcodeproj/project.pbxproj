@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		848D630919F690A500AE1C6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D630819F690A500AE1C6B /* main.m */; };
+		848D631119F6952600AE1C6B /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D631019F6952600AE1C6B /* Calculator.m */; };
+		848D631419F6DA4A00AE1C6B /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D631319F6DA4A00AE1C6B /* ToDo.m */; };
+		848D631719F6DDBD00AE1C6B /* ToDoList.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D631619F6DDBD00AE1C6B /* ToDoList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		848D630519F690A500AE1C6B /* Methods */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Methods; sourceTree = BUILT_PRODUCTS_DIR; };
 		848D630819F690A500AE1C6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		848D630F19F6930B00AE1C6B /* Calculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		848D631019F6952600AE1C6B /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		848D631219F6D7A000AE1C6B /* ToDo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
+		848D631319F6DA4A00AE1C6B /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
+		848D631519F6DC5700AE1C6B /* ToDoList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoList.h; sourceTree = "<group>"; };
+		848D631619F6DDBD00AE1C6B /* ToDoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				848D630819F690A500AE1C6B /* main.m */,
+				848D630F19F6930B00AE1C6B /* Calculator.h */,
+				848D631019F6952600AE1C6B /* Calculator.m */,
+				848D631219F6D7A000AE1C6B /* ToDo.h */,
+				848D631319F6DA4A00AE1C6B /* ToDo.m */,
+				848D631519F6DC5700AE1C6B /* ToDoList.h */,
+				848D631619F6DDBD00AE1C6B /* ToDoList.m */,
 			);
 			path = Methods;
 			sourceTree = "<group>";
@@ -119,6 +134,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				848D630919F690A500AE1C6B /* main.m in Sources */,
+				848D631119F6952600AE1C6B /* Calculator.m in Sources */,
+				848D631419F6DA4A00AE1C6B /* ToDo.m in Sources */,
+				848D631719F6DDBD00AE1C6B /* ToDoList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +250,7 @@
 				848D630E19F690A500AE1C6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
