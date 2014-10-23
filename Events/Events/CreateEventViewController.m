@@ -37,6 +37,7 @@
     ev.category = self.categoryTextField.text;
     ev.descript = self.descriptionTextField.text;
     ev.date = self.datePickerField.date;
+    self.event = ev;
 }
 /*
 #pragma mark - Navigation
