@@ -14,6 +14,9 @@
 		848D633219F6EADD00AE1C6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848D633119F6EADD00AE1C6B /* Images.xcassets */; };
 		848D633519F6EADD00AE1C6B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848D633319F6EADD00AE1C6B /* LaunchScreen.xib */; };
 		848D634119F6EADD00AE1C6B /* EventsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D634019F6EADD00AE1C6B /* EventsTests.m */; };
+		848D634C19F7F17E00AE1C6B /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D634B19F7F17E00AE1C6B /* Event.m */; };
+		848D634F19F7F7CF00AE1C6B /* EventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D634E19F7F7CF00AE1C6B /* EventManager.m */; };
+		848D635419F8318D00AE1C6B /* CreateEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D635319F8318D00AE1C6B /* CreateEventViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		848D633A19F6EADD00AE1C6B /* EventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		848D633F19F6EADD00AE1C6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		848D634019F6EADD00AE1C6B /* EventsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsTests.m; sourceTree = "<group>"; };
+		848D634A19F7ED5C00AE1C6B /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		848D634B19F7F17E00AE1C6B /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		848D634D19F7F6D000AE1C6B /* EventManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventManager.h; sourceTree = "<group>"; };
+		848D634E19F7F7CF00AE1C6B /* EventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventManager.m; sourceTree = "<group>"; };
+		848D635219F8318D00AE1C6B /* CreateEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEventViewController.h; sourceTree = "<group>"; };
+		848D635319F8318D00AE1C6B /* CreateEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEventViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +98,12 @@
 				848D633119F6EADD00AE1C6B /* Images.xcassets */,
 				848D633319F6EADD00AE1C6B /* LaunchScreen.xib */,
 				848D632419F6EADD00AE1C6B /* Supporting Files */,
+				848D634A19F7ED5C00AE1C6B /* Event.h */,
+				848D634B19F7F17E00AE1C6B /* Event.m */,
+				848D634D19F7F6D000AE1C6B /* EventManager.h */,
+				848D634E19F7F7CF00AE1C6B /* EventManager.m */,
+				848D635219F8318D00AE1C6B /* CreateEventViewController.h */,
+				848D635319F8318D00AE1C6B /* CreateEventViewController.m */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -219,9 +234,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848D634C19F7F17E00AE1C6B /* Event.m in Sources */,
+				848D635419F8318D00AE1C6B /* CreateEventViewController.m in Sources */,
 				848D632D19F6EADD00AE1C6B /* ViewController.m in Sources */,
 				848D632A19F6EADD00AE1C6B /* AppDelegate.m in Sources */,
 				848D632719F6EADD00AE1C6B /* main.m in Sources */,
+				848D634F19F7F7CF00AE1C6B /* EventManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +366,7 @@
 				INFOPLIST_FILE = Events/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -358,6 +377,7 @@
 				INFOPLIST_FILE = Events/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
