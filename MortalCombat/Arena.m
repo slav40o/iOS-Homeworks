@@ -11,6 +11,7 @@
 #import "Character.h"
 #import "AttackType.h"
 #import "GameState.h"
+#import "SkillAttackResult.h"
 
 @implementation Arena
 
@@ -23,6 +24,16 @@
     }
     
     return self;
+}
+
+void printResult(SkillAttackResult *result){
+    if ([result.resultStatus isEqualToString:@"OK"]) {
+        NSLog(@"%@", result.message);
+    }
+    else{
+        NSLog(@"%@", result.resultStatus);
+        NSLog(@"%@", result.message);
+    }
 }
 
 -(void)firstPlayerBasicAttack:(enum AttackType) attackType{
@@ -68,11 +79,23 @@
 }
 
 -(void)firstPlayerSkillAttack:(NSString*) skillName{
+    if (self.gameState != ACTIVE) {
+        // TO DO: THROW PROPER EXCEPTION
+        return;
+    }
     
+    SkillAttackResult *result = [self.firstPlayer useSkill:skillName toOponent:self.secondPlayer];
+    printResult(result);
 }
 
 -(void)secondPlayerSkillAttack:(NSString*) skillName{
+    if (self.gameState != ACTIVE) {
+        // TO DO: THROW PROPER EXCEPTION
+        return;
+    }
     
+    SkillAttackResult *result = [self.secondPlayer useSkill:skillName toOponent:self.firstPlayer];
+    printResult(result);
 }
 
 @end

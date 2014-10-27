@@ -16,12 +16,14 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Reptile *rept = [[Reptile alloc]init];
-        NSLog(@"%@", rept.name);
+        NSLog(@"%@", [rept listSkills]);
         
         Cyrax *myCyrax = [Cyrax new];
-        NSLog(@"%li", myCyrax.kickPower);
+        NSLog(@"%@", [myCyrax listSkills]);
         
-        
+        Arena *battle = [[Arena alloc] initWithFirstPlayer:rept andSecondPlayer:myCyrax];
+        [battle firstPlayerBasicAttack: KICK];
+        [battle secondPlayerSkillAttack:@"Cyberdriver"];
     }
     
     return 0;

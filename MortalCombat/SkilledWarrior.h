@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "Skill.h"
 #import "SkilledWarrior.h"
+#import "SkillAttackResult.h"
 
 @protocol SkilledWarrior<NSObject>
 
 @property NSArray* skills;
--(void)useSkill:(NSString*)skillName toOponent:(NSObject<SkilledWarrior>*)oponent;
+-(SkillAttackResult*)useSkill:(NSString*)skillName toOponent:(NSObject<SkilledWarrior>*)oponent;
 -(NSArray*)listSkills;
 
 @end

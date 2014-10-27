@@ -22,4 +22,9 @@
     return self;
 }
 
+-(NSString*)description{
+    NSString *desc = [[NSString alloc] initWithFormat:@"%@(damage: %li; power cost: %li)", self.name, self.damage, self.powerCost];
+    return desc;
+}
+
 @end

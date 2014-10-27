@@ -16,4 +16,6 @@
 @property NSInteger powerCost;
 @property NSInteger damage;
 
+-(NSString*)description;
+
 @end

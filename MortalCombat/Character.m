@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Character.h"
+#import "SkillAttackResult.h"
 
 @implementation Character
 
@@ -59,12 +60,29 @@ Skill* findSkill (NSString* skill, NSArray *skillsList){
     return foundSkill;
 }
 
--(void)useSkill:(NSString*)skillName toOponent:(Character*)oponent{
+-(SkillAttackResult*)useSkill:(NSString*)skillName toOponent:(Character*)oponent{
     Skill *skill = findSkill(skillName, self.skills);
+    NSString *status;
+    NSString *message;
+    
     if (skill != nil && self.power - skill.powerCost > 0) {
         oponent.life -= skill.damage;
         self.power -= skill.powerCost;
+        status = @"OK";
+        message = [[NSString alloc] initWithFormat:@"%@ dealed %li damage to %@ with %@", self.name, skill.damage, oponent.name, skill.name];
     }
+    else{
+        status = @"ERROR";
+        if (skill == nil) {
+            message = [[NSString alloc] initWithFormat: @"%@", @"Skill isn't found!"];
+        }
+        else{
+            message = [[NSString alloc] initWithFormat: @"%@", @"Not enough power!"];
+        }
+    }
+    
+    SkillAttackResult *result = [[SkillAttackResult alloc] initWithStatus:status andMessage:message];
+    return result;
 }
 
 -(NSArray*)listSkills{

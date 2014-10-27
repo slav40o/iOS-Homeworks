@@ -15,8 +15,8 @@
 
 -(instancetype)initWithFirstPlayer:(Character*)first andSecondPlayer:(Character*)secondPlayer;
 
-@property (strong, nonatomic) Character *firstPlayer;
-@property (strong, nonatomic) Character *secondPlayer;
+@property (strong, nonatomic) Character<SkilledWarrior> *firstPlayer;
+@property (strong, nonatomic) Character<SkilledWarrior> *secondPlayer;
 @property (nonatomic, assign) enum GameState gameState;
 
 -(void)firstPlayerBasicAttack:(enum AttackType) attackType;

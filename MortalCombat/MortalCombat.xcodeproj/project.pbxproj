@@ -13,6 +13,7 @@
 		848D637519F9281E00AE1C6B /* Skill.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D637419F9281E00AE1C6B /* Skill.m */; };
 		848D637819F9A3F500AE1C6B /* Cyrax.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D637719F9A3F500AE1C6B /* Cyrax.m */; };
 		84EB1F7A19FE44B100979DC5 /* Arena.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1F7919FE44B100979DC5 /* Arena.m */; };
+		84EB1FB119FEE10400979DC5 /* SkillAttackResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1FB019FEE10400979DC5 /* SkillAttackResult.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,8 @@
 		84EB1F7919FE44B100979DC5 /* Arena.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arena.m; sourceTree = "<group>"; };
 		84EB1F7B19FE49C500979DC5 /* AttackType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttackType.h; sourceTree = "<group>"; };
 		84EB1F7C19FE4A5E00979DC5 /* GameState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
+		84EB1FAF19FEE08700979DC5 /* SkillAttackResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkillAttackResult.h; sourceTree = "<group>"; };
+		84EB1FB019FEE10400979DC5 /* SkillAttackResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillAttackResult.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 				848D637719F9A3F500AE1C6B /* Cyrax.m */,
 				84EB1F7C19FE4A5E00979DC5 /* GameState.h */,
 				84EB1F7B19FE49C500979DC5 /* AttackType.h */,
+				84EB1FAF19FEE08700979DC5 /* SkillAttackResult.h */,
+				84EB1FB019FEE10400979DC5 /* SkillAttackResult.m */,
 			);
 			name = Characters;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				84EB1F7A19FE44B100979DC5 /* Arena.m in Sources */,
 				848D637319F922F400AE1C6B /* Reptile.m in Sources */,
 				848D637819F9A3F500AE1C6B /* Cyrax.m in Sources */,
+				84EB1FB119FEE10400979DC5 /* SkillAttackResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
