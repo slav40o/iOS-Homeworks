@@ -46,6 +46,7 @@ EventManger *manager;
     
     Event *currEv = [manager.all objectAtIndex:indexPath.row];
     cell.textLabel.text = currEv.title;
+    //cell.backgroundColor = [[UIColor alloc] initWithRed:90 green:255 blue:90 alpha:1];
     
     return  cell;
 }

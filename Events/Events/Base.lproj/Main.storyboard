@@ -34,18 +34,27 @@
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="XJK-Om-fxZ"/>
                                 </connections>
                             </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="n00-9k-Tma">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                </variation>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="stF-LW-Ue2"/>
                                 <exclude reference="VVD-Th-U95"/>
+                                <exclude reference="n00-9k-Tma"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="stF-LW-Ue2"/>
                                 <include reference="VVD-Th-U95"/>
+                                <include reference="n00-9k-Tma"/>
                             </mask>
                         </variation>
                     </view>
@@ -57,7 +66,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="VVD-Th-U95" id="aEV-tQ-3Ge"/>
+                        <outlet property="tableView" destination="n00-9k-Tma" id="e23-4E-Xtg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -11,6 +11,7 @@
 
 @implementation Character
 
+@synthesize skills;
 const NSInteger kickDamage = 20;
 const NSInteger punchDamage = 15;
 NSInteger maxPower;

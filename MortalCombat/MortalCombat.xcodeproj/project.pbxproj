@@ -12,6 +12,7 @@
 		848D637319F922F400AE1C6B /* Reptile.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D637219F922F400AE1C6B /* Reptile.m */; };
 		848D637519F9281E00AE1C6B /* Skill.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D637419F9281E00AE1C6B /* Skill.m */; };
 		848D637819F9A3F500AE1C6B /* Cyrax.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D637719F9A3F500AE1C6B /* Cyrax.m */; };
+		84EB1F7A19FE44B100979DC5 /* Arena.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EB1F7919FE44B100979DC5 /* Arena.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,7 +30,6 @@
 /* Begin PBXFileReference section */
 		848D635E19F905DE00AE1C6B /* MortalCombat */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MortalCombat; sourceTree = BUILT_PRODUCTS_DIR; };
 		848D636119F905DE00AE1C6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		848D636A19F9120400AE1C6B /* Character.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Character.h; path = ../../Character.h; sourceTree = "<group>"; };
 		848D636B19F9182700AE1C6B /* Skill.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Skill.h; sourceTree = "<group>"; };
 		848D636E19F91CB600AE1C6B /* SkilledWarrior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkilledWarrior.h; sourceTree = "<group>"; };
 		848D636F19F91CF900AE1C6B /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
@@ -38,6 +38,11 @@
 		848D637419F9281E00AE1C6B /* Skill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skill.m; sourceTree = "<group>"; };
 		848D637619F9A3BB00AE1C6B /* Cyrax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cyrax.h; sourceTree = "<group>"; };
 		848D637719F9A3F500AE1C6B /* Cyrax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cyrax.m; sourceTree = "<group>"; };
+		84EB1F7719FE2BA800979DC5 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		84EB1F7819FE40C900979DC5 /* Arena.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arena.h; sourceTree = "<group>"; };
+		84EB1F7919FE44B100979DC5 /* Arena.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arena.m; sourceTree = "<group>"; };
+		84EB1F7B19FE49C500979DC5 /* AttackType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttackType.h; sourceTree = "<group>"; };
+		84EB1F7C19FE4A5E00979DC5 /* GameState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,15 +85,19 @@
 		848D636919F90CBF00AE1C6B /* Characters */ = {
 			isa = PBXGroup;
 			children = (
+				84EB1F7819FE40C900979DC5 /* Arena.h */,
+				84EB1F7919FE44B100979DC5 /* Arena.m */,
+				84EB1F7719FE2BA800979DC5 /* Character.h */,
+				848D636F19F91CF900AE1C6B /* Character.m */,
 				848D636E19F91CB600AE1C6B /* SkilledWarrior.h */,
 				848D636B19F9182700AE1C6B /* Skill.h */,
 				848D637419F9281E00AE1C6B /* Skill.m */,
-				848D636A19F9120400AE1C6B /* Character.h */,
-				848D636F19F91CF900AE1C6B /* Character.m */,
 				848D637119F9224700AE1C6B /* Reptile.h */,
 				848D637219F922F400AE1C6B /* Reptile.m */,
 				848D637619F9A3BB00AE1C6B /* Cyrax.h */,
 				848D637719F9A3F500AE1C6B /* Cyrax.m */,
+				84EB1F7C19FE4A5E00979DC5 /* GameState.h */,
+				84EB1F7B19FE49C500979DC5 /* AttackType.h */,
 			);
 			name = Characters;
 			sourceTree = "<group>";
@@ -152,6 +161,7 @@
 				848D636219F905DE00AE1C6B /* main.m in Sources */,
 				848D637519F9281E00AE1C6B /* Skill.m in Sources */,
 				848D637019F91CF900AE1C6B /* Character.m in Sources */,
+				84EB1F7A19FE44B100979DC5 /* Arena.m in Sources */,
 				848D637319F922F400AE1C6B /* Reptile.m in Sources */,
 				848D637819F9A3F500AE1C6B /* Cyrax.m in Sources */,
 			);
@@ -267,6 +277,7 @@
 				848D636719F905DE00AE1C6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

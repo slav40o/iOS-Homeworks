@@ -10,10 +10,9 @@
 #import "Skill.h"
 #import "SkilledWarrior.h"
 
-@protocol SkilledWarrior
+@protocol SkilledWarrior<NSObject>
 
 @property NSArray* skills;
-
 -(void)useSkill:(NSString*)skillName toOponent:(NSObject<SkilledWarrior>*)oponent;
 -(NSArray*)listSkills;
 
