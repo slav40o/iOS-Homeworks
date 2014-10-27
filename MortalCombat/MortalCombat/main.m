@@ -15,7 +15,7 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Reptile *rept = [[Reptile alloc]init];
+        Reptile *rept = [[Reptile alloc] init];
         NSLog(@"%@", [rept listSkills]);
         
         Cyrax *myCyrax = [Cyrax new];
