@@ -19,9 +19,19 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    self.passwordLabel.text = self.password.encryptedPass;
+    self.accountName.text = self.password.accountName;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)decryptBtnTapped:(UIButton *)sender {
+    NSString *decrypted = [self.password decryptPassword:self.secretCodeInput.text];
+    self.decryptedPasswordLabel.text = decrypted;
 }
 
 @end

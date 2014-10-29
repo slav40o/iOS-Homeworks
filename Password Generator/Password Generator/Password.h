@@ -15,6 +15,7 @@
 @property NSString *accountName;
 @property NSString *encryptedPass;
 @property NSString *decryptionCode;
+@property BOOL isCreated;
 
 -(NSString*)decryptPassword:(NSString*)decryptionCode;
 

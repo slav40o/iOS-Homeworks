@@ -11,7 +11,5 @@
 
 @interface MainViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) NSArray *passwords;
-
 @end
 

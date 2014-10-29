@@ -15,6 +15,8 @@
 @property (strong, nonatomic) Password *password;
 @property (weak, nonatomic) IBOutlet UILabel *passwordLabel;
 @property (weak, nonatomic) IBOutlet UILabel *decryptedPasswordLabel;
+@property (weak, nonatomic) IBOutlet UILabel *accountName;
 @property (weak, nonatomic) IBOutlet UITextField *secretCodeInput;
+- (IBAction)decryptBtnTapped:(UIButton *)sender;
 
 @end
