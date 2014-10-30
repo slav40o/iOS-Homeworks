@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreateListViewController : UIViewController
+@interface CreateListViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleInput;
 @property (weak, nonatomic) IBOutlet UITextField *categoryInput;
 - (IBAction)createBtnTapped:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIPickerView *colorPicker;
 
 @end

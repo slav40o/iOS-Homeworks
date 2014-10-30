@@ -41,18 +41,6 @@
                                     <rect key="frame" x="16" y="283" width="343" height="30"/>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMy-qX-9Fa">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Create">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="164" y="339" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="createBtnTapped:" destination="Ftd-hc-Ll7" eventType="touchUpInside" id="uLD-Bz-QHW"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yto-0P-vBe">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -62,6 +50,21 @@
                                     <rect key="frame" x="166" y="97" width="42" height="21"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0E-24-0Br">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="128" y="366" width="118" height="21"/>
+                                </variation>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ck-Eu-mwr">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="405" width="343" height="162"/>
+                                </variation>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -69,8 +72,9 @@
                                 <exclude reference="bJa-9A-rsY"/>
                                 <exclude reference="nDT-pB-icn"/>
                                 <exclude reference="YAQ-m7-yek"/>
-                                <exclude reference="cMy-qX-9Fa"/>
                                 <exclude reference="yto-0P-vBe"/>
+                                <exclude reference="j0E-24-0Br"/>
+                                <exclude reference="3ck-Eu-mwr"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -78,14 +82,29 @@
                                 <include reference="bJa-9A-rsY"/>
                                 <include reference="nDT-pB-icn"/>
                                 <include reference="YAQ-m7-yek"/>
-                                <include reference="cMy-qX-9Fa"/>
                                 <include reference="yto-0P-vBe"/>
+                                <include reference="j0E-24-0Br"/>
+                                <include reference="3ck-Eu-mwr"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Create New List" id="aov-en-uGT"/>
+                    <navigationItem key="navigationItem" title="Create New List" id="aov-en-uGT">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="iGT-A3-70b">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cMy-qX-9Fa">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createBtnTapped:" destination="Ftd-hc-Ll7" eventType="touchUpInside" id="uLD-Bz-QHW"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="categoryInput" destination="YAQ-m7-yek" id="tmk-Em-Zgm"/>
+                        <outlet property="colorPicker" destination="3ck-Eu-mwr" id="h9d-Jk-1tX"/>
                         <outlet property="titleInput" destination="bJa-9A-rsY" id="iKk-l0-IWx"/>
                     </connections>
                 </viewController>
@@ -458,7 +477,7 @@
                                     <!--2014-10-29 22:04:06 +0000-->
                                 </date>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-13" y="435" width="400" height="162"/>
+                                    <rect key="frame" x="-13" y="456" width="400" height="162"/>
                                 </variation>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcU-0f-TH9">
@@ -478,35 +497,13 @@
                                     <rect key="frame" x="16" y="134" width="343" height="30"/>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMJ-4I-Hhw">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="138" y="196" width="99" height="21"/>
-                                </variation>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eb-E9-NM7">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Create">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="150" y="617" width="75" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="createNote:" destination="u85-4Q-Aom" eventType="touchUpInside" id="paE-OC-Zjt"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="361-7d-fqH">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="145" y="399" width="84" height="21"/>
+                                    <rect key="frame" x="145" y="414" width="84" height="21"/>
                                 </variation>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zy2-YC-DkM">
@@ -518,6 +515,15 @@
                                     <rect key="frame" x="16" y="234" width="343" height="140"/>
                                 </variation>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMJ-4I-Hhw">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="138" y="196" width="99" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -525,10 +531,9 @@
                                 <exclude reference="tfn-be-zBD"/>
                                 <exclude reference="zcU-0f-TH9"/>
                                 <exclude reference="Wmz-6F-Ri5"/>
-                                <exclude reference="LMJ-4I-Hhw"/>
-                                <exclude reference="7eb-E9-NM7"/>
                                 <exclude reference="361-7d-fqH"/>
                                 <exclude reference="Zy2-YC-DkM"/>
+                                <exclude reference="LMJ-4I-Hhw"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -536,14 +541,27 @@
                                 <include reference="tfn-be-zBD"/>
                                 <include reference="zcU-0f-TH9"/>
                                 <include reference="Wmz-6F-Ri5"/>
-                                <include reference="LMJ-4I-Hhw"/>
-                                <include reference="7eb-E9-NM7"/>
                                 <include reference="361-7d-fqH"/>
                                 <include reference="Zy2-YC-DkM"/>
+                                <include reference="LMJ-4I-Hhw"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Create New Note" id="cbc-Ge-lId"/>
+                    <navigationItem key="navigationItem" title="Create New Note" id="cbc-Ge-lId">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="VWc-sK-uSh">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7eb-E9-NM7">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Create">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createNote:" destination="u85-4Q-Aom" eventType="touchUpInside" id="paE-OC-Zjt"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="tfn-be-zBD" id="tJN-UV-pbb"/>
                         <outlet property="descriptionTextView" destination="Zy2-YC-DkM" id="T1k-Nb-U3E"/>

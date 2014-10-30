@@ -16,6 +16,7 @@
         self.title = title;
         self.category = category;
         self.notes = [[NSMutableArray alloc] initWithCapacity:4];
+        self.color = [UIColor whiteColor];
     }
     
     return self;
@@ -25,6 +26,15 @@
     self = [self initWithTitle:title andCategory:category];
     if (self != nil) {
         self.notes = [[NSMutableArray alloc] initWithArray:notes];
+    }
+    
+    return self;
+}
+
+-(instancetype)initWithTitle:(NSString*)title category:(NSString*)category andColor:(UIColor*)color{
+    self = [self initWithTitle:title andCategory:category];
+    if (self != nil) {
+        self.color = color;
     }
     
     return self;

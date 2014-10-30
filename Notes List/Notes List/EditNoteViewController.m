@@ -31,16 +31,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)changeEditMode:(id)sender {
     if (isInEditMode) {
         isInEditMode = NO;
@@ -61,14 +51,34 @@
     NSString *changedTitle = self.titleTextField.text;
     NSString *changedDescription = self.descriptionView.text;
     NSDate *changedEndDate = self.datePicker.date;
-    if (changedTitle == nil || changedDescription == nil || changedTitle.length < 2 || changedDescription.length < 10) {
-        // TO DO Alert for invalid data passed
+    if (changedTitle == nil || changedTitle.length > 20 || changedTitle.length < 2 ) {
+        [[[UIAlertView alloc] initWithTitle:@"Invalid Title!"
+                                    message:@"Title is required \n(from 2 to 20 symbols)"
+                                   delegate:nil
+                          cancelButtonTitle:@"Ok"
+                          otherButtonTitles:nil, nil]
+         show];
+    }
+    else if (changedDescription == nil || changedDescription.length < 10){
+        [[[UIAlertView alloc] initWithTitle:@"Invalid Description!"
+                                    message:@"Description is required \n(at least 10 symbols)"
+                                   delegate:nil
+                          cancelButtonTitle:@"Ok"
+                          otherButtonTitles:nil, nil]
+         show];
     }
     else{
         self.note.title = changedTitle;
         self.note.detailDescription = changedDescription;
         self.note.endDate = changedEndDate;
         [self changeEditMode: self];
+        
+        [[[UIAlertView alloc] initWithTitle:@"Success!"
+                                    message:@"Changes are saved and updated."
+                                   delegate:nil
+                          cancelButtonTitle:@"Ok"
+                          otherButtonTitles:nil, nil]
+         show];
     }
     
     [self setViewValues];
