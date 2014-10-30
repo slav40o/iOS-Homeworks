@@ -44,16 +44,16 @@
 - (IBAction)changeEditMode:(id)sender {
     if (isInEditMode) {
         isInEditMode = NO;
-        [self disableEditingValues];
         self.saveBtn.hidden = YES;
         [self.editButton setTitle: @"Edit" forState: UIControlStateNormal];
         [self setViewValues];
+        [self disableEditingValues];
     }
     else{
+        [self enableEditingValues];
         self.saveBtn.hidden = NO;
         isInEditMode = YES;
         [self.editButton setTitle: @"Cancel" forState: UIControlStateNormal];
-        [self enableEditingValues];
     }
 }
 

@@ -10,4 +10,9 @@
 
 @interface CreateNoteViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *noteTitleTextField;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+- (IBAction)createNote:(id)sender;
+
 @end

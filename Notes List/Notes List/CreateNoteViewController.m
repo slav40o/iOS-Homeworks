@@ -7,6 +7,8 @@
 //
 
 #import "CreateNoteViewController.h"
+#import "Note.h"
+#import "ListDetailsViewController.h"
 
 @interface CreateNoteViewController ()
 
@@ -33,5 +35,24 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)createNote:(id)sender {
+    NSString *title = self.noteTitleTextField.text;
+    NSString *description = self.descriptionTextView.text;
+    NSDate *date = self.datePicker.date;
+    
+    if (title == nil || description == nil || title.length < 2 || description.length < 2) {
+        // TO DO Alert for unapropriate data entered
+        [[[UIAlertView alloc] initWithTitle:@"Test" message:@"gfsd" delegate:nil cancelButtonTitle:@"Ok"otherButtonTitles:nil, nil] show];
+    }
+    else{
+        Note *newNote = [[Note alloc] initWithTitle:title description:description andEndDate:date];
+        NSInteger index = self.navigationController.viewControllers.count - 2;
+        ListDetailsViewController *prev = [self.navigationController.viewControllers objectAtIndex:index];
+        [prev.list.notes addObject:newNote];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
 
 @end
