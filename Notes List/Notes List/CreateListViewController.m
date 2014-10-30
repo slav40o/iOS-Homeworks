@@ -7,6 +7,8 @@
 //
 
 #import "CreateListViewController.h"
+#import "MainViewController.h"
+#import "List.h"
 
 @interface CreateListViewController ()
 
@@ -35,5 +37,18 @@
 */
 
 - (IBAction)createBtnTapped:(UIButton *)sender {
+    NSString *title = self.titleInput.text;
+    NSString *category = self.categoryInput.text;
+    if (title == nil || category == nil || title.length < 2 || category.length < 2) {
+        // TO DO Alert for unapropriate data entered
+    }
+    else{
+        List *newList = [[List alloc] initWithTitle:title andCategory:category];
+        MainViewController *prev = [self.navigationController.viewControllers objectAtIndex:0];
+        [prev.data addList:newList];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
+
 @end

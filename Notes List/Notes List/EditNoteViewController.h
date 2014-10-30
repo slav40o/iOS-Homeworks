@@ -13,7 +13,11 @@
 
 @property (strong, nonatomic) Note *note;
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
-@property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionView;
+@property (weak, nonatomic) IBOutlet UIButton *editButton;
+- (IBAction)changeEditMode:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *saveBtn;
+- (IBAction)saveChanges:(id)sender;
 
 @end

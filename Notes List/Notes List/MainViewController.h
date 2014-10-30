@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ListData.h"
 
 @interface MainViewController : UITableViewController
 
+@property (strong, nonatomic) ListData *data;
 
 @end
 

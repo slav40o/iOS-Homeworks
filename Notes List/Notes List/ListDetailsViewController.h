@@ -16,5 +16,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleListLabel;
 @property (weak, nonatomic) IBOutlet UILabel *categoryTextLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *doneEditBtn;
 
+
+- (IBAction)doneEditingBtnTapped:(UIButton *)sender;
+- (IBAction)editBtnTapped:(id)sender;
 @end

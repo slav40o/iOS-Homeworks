@@ -21,6 +21,7 @@
     [super viewDidLoad];
     self.title = self.list.title;
     self.categoryTextLabel.text = self.list.category;
+    self.doneEditBtn.hidden = YES;
     // Do any additional setup after loading the view.
 }
 
@@ -45,11 +46,22 @@
     return cell;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return YES if you want the specified item to be editable.
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.list.notes removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"toNoteDetailsSegue"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        UINavigationController *navController = (UINavigationController*)[segue destinationViewController];
-        EditNoteViewController *destViewController = (EditNoteViewController*)[navController topViewController];
+        EditNoteViewController *destViewController = (EditNoteViewController*)[segue destinationViewController];
         Note *note = [self.list.notes objectAtIndex:indexPath.row];
         destViewController.note = note;
     }
@@ -64,4 +76,13 @@
 }
 */
 
+- (IBAction)doneEditingBtnTapped:(UIButton *)sender {
+    [self.tableView setEditing:NO animated:YES];
+    self.doneEditBtn.hidden = YES;
+}
+
+- (IBAction)editBtnTapped:(id)sender {
+    [self.tableView setEditing:YES animated:YES];
+    self.doneEditBtn.hidden = NO;
+}
 @end

@@ -11,22 +11,29 @@
 #import "List.h"
 #import "TableViewCell.h"
 #import "ListDetailsViewController.h"
+#import "Note.h"
 
 @interface MainViewController ()
 
 @end
 
-@implementation MainViewController{
-    ListData *data;
-}
+@implementation MainViewController
+
+@synthesize data;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     data = [[ListData alloc] init];
-    List *list1 = [[List alloc] initWithTitle:@"iOS Tasks" andCategory:@"Homeork"];
-    List *list2 = [[List alloc] initWithTitle:@"JS Tasks" andCategory:@"Homeork"];
+    List *list1 = [[List alloc] initWithTitle:@"iOS Tasks" andCategory:@"Homework"];
+    List *list2 = [[List alloc] initWithTitle:@"JS Tasks" andCategory:@"Homework"];
     [data addList:list1];
     [data addList:list2];
+    Note *iOsNote1 = [[Note alloc] initWithTitle:@"Custom Views" andDescription:@"Do the homework for the custom views lecture."];
+    Note *iOsNote2 = [[Note alloc] initWithTitle:@"Delegates" andDescription:@"Do the homework for the delegates in iOS lecture."];
+    Note *JSsNote = [[Note alloc] initWithTitle:@"Angular" andDescription:@"Do the homework for the angular lecture."];
+    [list1.notes addObject:iOsNote1];
+    [list1.notes addObject:iOsNote2];
+    [list2.notes addObject:JSsNote];
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -48,8 +55,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"toListDetailsSegue"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        UINavigationController *navController = (UINavigationController*)[segue destinationViewController];
-        ListDetailsViewController *destViewController = (ListDetailsViewController*)[navController topViewController];
+        ListDetailsViewController *destViewController = (ListDetailsViewController*)[segue destinationViewController];
         List *list = [data getListByIndex:indexPath.row];
         destViewController.list = list;
     }
