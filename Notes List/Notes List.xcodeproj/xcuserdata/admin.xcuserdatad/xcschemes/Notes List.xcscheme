@@ -14,10 +14,24 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8DD76F960486AA7600D96B5E"
-               BuildableName = "base64"
-               BlueprintName = "base64"
-               ReferencedContainer = "container:base64.xcodeproj">
+               BlueprintIdentifier = "84CDF3CA1A016A53000C7BEE"
+               BuildableName = "Notes List.app"
+               BlueprintName = "Notes List"
+               ReferencedContainer = "container:Notes List.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "84CDF3E31A016A54000C7BEE"
+               BuildableName = "Notes ListTests.xctest"
+               BlueprintName = "Notes ListTests"
+               ReferencedContainer = "container:Notes List.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +42,24 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "84CDF3E31A016A54000C7BEE"
+               BuildableName = "Notes ListTests.xctest"
+               BlueprintName = "Notes ListTests"
+               ReferencedContainer = "container:Notes List.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8DD76F960486AA7600D96B5E"
-            BuildableName = "base64"
-            BlueprintName = "base64"
-            ReferencedContainer = "container:base64.xcodeproj">
+            BlueprintIdentifier = "84CDF3CA1A016A53000C7BEE"
+            BuildableName = "Notes List.app"
+            BlueprintName = "Notes List"
+            ReferencedContainer = "container:Notes List.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +75,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8DD76F960486AA7600D96B5E"
-            BuildableName = "base64"
-            BlueprintName = "base64"
-            ReferencedContainer = "container:base64.xcodeproj">
+            BlueprintIdentifier = "84CDF3CA1A016A53000C7BEE"
+            BuildableName = "Notes List.app"
+            BlueprintName = "Notes List"
+            ReferencedContainer = "container:Notes List.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +93,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8DD76F960486AA7600D96B5E"
-            BuildableName = "base64"
-            BlueprintName = "base64"
-            ReferencedContainer = "container:base64.xcodeproj">
+            BlueprintIdentifier = "84CDF3CA1A016A53000C7BEE"
+            BuildableName = "Notes List.app"
+            BlueprintName = "Notes List"
+            ReferencedContainer = "container:Notes List.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
