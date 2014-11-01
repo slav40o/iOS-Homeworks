@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		848BE5201A05119C00E983C0 /* HttpJsonRequster.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 848BE51F1A05119C00E983C0 /* HttpJsonRequster.h */; };
+		848BE5221A05119C00E983C0 /* HttpJsonRequster.m in Sources */ = {isa = PBXBuildFile; fileRef = 848BE5211A05119C00E983C0 /* HttpJsonRequster.m */; };
+		848BE5281A05119C00E983C0 /* libHttpRequster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 848BE51C1A05119B00E983C0 /* libHttpRequster.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		848BE5291A05119C00E983C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 848BE5141A05119B00E983C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 848BE51B1A05119B00E983C0;
+			remoteInfo = HttpRequster;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		848BE51A1A05119B00E983C0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				848BE5201A05119C00E983C0 /* HttpJsonRequster.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		848BE51C1A05119B00E983C0 /* libHttpRequster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHttpRequster.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		848BE51F1A05119C00E983C0 /* HttpJsonRequster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpJsonRequster.h; sourceTree = "<group>"; };
+		848BE5211A05119C00E983C0 /* HttpJsonRequster.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpJsonRequster.m; sourceTree = "<group>"; };
+		848BE5271A05119C00E983C0 /* HttpRequsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HttpRequsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		848BE52D1A05119C00E983C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848BE56A1A053BA200E983C0 /* DataReciever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataReciever.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		848BE5191A05119B00E983C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		848BE5241A05119C00E983C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848BE5281A05119C00E983C0 /* libHttpRequster.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		848BE5131A05119B00E983C0 = {
+			isa = PBXGroup;
+			children = (
+				848BE51E1A05119B00E983C0 /* HttpRequster */,
+				848BE52B1A05119C00E983C0 /* HttpRequsterTests */,
+				848BE51D1A05119B00E983C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		848BE51D1A05119B00E983C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				848BE51C1A05119B00E983C0 /* libHttpRequster.a */,
+				848BE5271A05119C00E983C0 /* HttpRequsterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		848BE51E1A05119B00E983C0 /* HttpRequster */ = {
+			isa = PBXGroup;
+			children = (
+				848BE51F1A05119C00E983C0 /* HttpJsonRequster.h */,
+				848BE5211A05119C00E983C0 /* HttpJsonRequster.m */,
+				848BE56A1A053BA200E983C0 /* DataReciever.h */,
+			);
+			path = HttpRequster;
+			sourceTree = "<group>";
+		};
+		848BE52B1A05119C00E983C0 /* HttpRequsterTests */ = {
+			isa = PBXGroup;
+			children = (
+				848BE52C1A05119C00E983C0 /* Supporting Files */,
+			);
+			path = HttpRequsterTests;
+			sourceTree = "<group>";
+		};
+		848BE52C1A05119C00E983C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				848BE52D1A05119C00E983C0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		848BE51B1A05119B00E983C0 /* HttpRequster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 848BE5301A05119C00E983C0 /* Build configuration list for PBXNativeTarget "HttpRequster" */;
+			buildPhases = (
+				848BE5181A05119B00E983C0 /* Sources */,
+				848BE5191A05119B00E983C0 /* Frameworks */,
+				848BE51A1A05119B00E983C0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HttpRequster;
+			productName = HttpRequster;
+			productReference = 848BE51C1A05119B00E983C0 /* libHttpRequster.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		848BE5261A05119C00E983C0 /* HttpRequsterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 848BE5331A05119C00E983C0 /* Build configuration list for PBXNativeTarget "HttpRequsterTests" */;
+			buildPhases = (
+				848BE5231A05119C00E983C0 /* Sources */,
+				848BE5241A05119C00E983C0 /* Frameworks */,
+				848BE5251A05119C00E983C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				848BE52A1A05119C00E983C0 /* PBXTargetDependency */,
+			);
+			name = HttpRequsterTests;
+			productName = HttpRequsterTests;
+			productReference = 848BE5271A05119C00E983C0 /* HttpRequsterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		848BE5141A05119B00E983C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Slavi;
+				TargetAttributes = {
+					848BE51B1A05119B00E983C0 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					848BE5261A05119C00E983C0 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 848BE5171A05119B00E983C0 /* Build configuration list for PBXProject "HttpRequster" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 848BE5131A05119B00E983C0;
+			productRefGroup = 848BE51D1A05119B00E983C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				848BE51B1A05119B00E983C0 /* HttpRequster */,
+				848BE5261A05119C00E983C0 /* HttpRequsterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		848BE5251A05119C00E983C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		848BE5181A05119B00E983C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848BE5221A05119C00E983C0 /* HttpJsonRequster.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		848BE5231A05119C00E983C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		848BE52A1A05119C00E983C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 848BE51B1A05119B00E983C0 /* HttpRequster */;
+			targetProxy = 848BE5291A05119C00E983C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		848BE52E1A05119C00E983C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		848BE52F1A05119C00E983C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		848BE5311A05119C00E983C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		848BE5321A05119C00E983C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		848BE5341A05119C00E983C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HttpRequsterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		848BE5351A05119C00E983C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HttpRequsterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		848BE5171A05119B00E983C0 /* Build configuration list for PBXProject "HttpRequster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848BE52E1A05119C00E983C0 /* Debug */,
+				848BE52F1A05119C00E983C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		848BE5301A05119C00E983C0 /* Build configuration list for PBXNativeTarget "HttpRequster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848BE5311A05119C00E983C0 /* Debug */,
+				848BE5321A05119C00E983C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		848BE5331A05119C00E983C0 /* Build configuration list for PBXNativeTarget "HttpRequsterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848BE5341A05119C00E983C0 /* Debug */,
+				848BE5351A05119C00E983C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 848BE5141A05119B00E983C0 /* Project object */;
+}

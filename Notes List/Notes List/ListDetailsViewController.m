@@ -22,6 +22,7 @@
     self.title = self.list.title;
     self.categoryTextLabel.text = self.list.category;
     self.doneEditBtn.hidden = YES;
+    self.tableView.separatorColor = self.list.color;
     // Do any additional setup after loading the view.
 }
 
@@ -66,15 +67,6 @@
         destViewController.note = note;
     }
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)doneEditingBtnTapped:(UIButton *)sender {
     [self.tableView setEditing:NO animated:YES];

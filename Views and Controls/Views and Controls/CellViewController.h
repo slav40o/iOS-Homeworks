@@ -1,0 +1,13 @@
+//
+//  CellViewController.h
+//  Views and Controls
+//
+//  Created by Slavi on 10/31/14.
+//  Copyright (c) 2014 Slavi. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface CellViewController : UIViewController
+
+@end

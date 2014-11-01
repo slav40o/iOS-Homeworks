@@ -12,6 +12,7 @@
 #import "TableViewCell.h"
 #import "ListDetailsViewController.h"
 #import "Note.h"
+#import <Parse/Parse.h>
 
 @interface MainViewController ()
 
@@ -24,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setFakeData];
+    [self testParse];
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     self.navigationController.navigationBar.barTintColor = [UIColor purpleColor];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
@@ -86,6 +88,12 @@
     [list1.notes addObject:iOsNote1];
     [list1.notes addObject:iOsNote2];
     [list2.notes addObject:JSsNote];
+}
+
+-(void)testParse{
+    PFObject *person = [[PFObject alloc]initWithClassName:@"Person"];
+    person[@"name"] = @"Pesho";
+    [person saveInBackground];
 }
 
 @end
