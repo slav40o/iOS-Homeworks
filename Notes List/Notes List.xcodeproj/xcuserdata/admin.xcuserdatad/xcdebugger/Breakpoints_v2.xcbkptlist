@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Notes List/CreateListViewController.m"
-            timestampString = "436630071.714785"
+            timestampString = "436634424.536432"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
@@ -272,6 +272,22 @@
             startingLineNumber = "89"
             endingLineNumber = "89"
             landmarkName = "-fetchData"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Notes List/List.m"
+            timestampString = "436634424.536432"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-initWithTitle:category:andColor:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

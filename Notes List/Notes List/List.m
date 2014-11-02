@@ -7,6 +7,7 @@
 //
 
 #import "List.h"
+#import <UIKit/UIKit.h>
 
 @implementation List
 
@@ -47,16 +48,18 @@
 -(instancetype)initWithTitle:(NSString*)title category:(NSString*)category andColor:(UIColor*)color{
     self = [self initWithTitle:title andCategory:category];
     if (self != nil) {
-        self.color = [[CIColor colorWithCGColor:[[UIColor whiteColor] CGColor]] stringRepresentation];
+        CGColorRef colorRef = color.CGColor;
+        NSString *colorString = [CIColor colorWithCGColor:colorRef].stringRepresentation;
+        self.color = colorString;
     }
     
     return self;
 }
 
 -(UIColor*)getUIColor{
-    NSArray *parts = [self.color componentsSeparatedByString:@" "];
-    UIColor *colorFromString = [UIColor colorWithRed:[parts[0] floatValue] green:[parts[1] floatValue] blue:[parts[2] floatValue] alpha:[parts[3] floatValue]];
-    return colorFromString;
+    CIColor *coreColor = [CIColor colorWithString:self.color];
+    UIColor *color = [UIColor colorWithCIColor:coreColor];
+    return color;
 }
 
 @end
