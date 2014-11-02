@@ -64,6 +64,7 @@
         NSInteger index = self.navigationController.viewControllers.count - 2;
         ListDetailsViewController *prev = [self.navigationController.viewControllers objectAtIndex:index];
         [prev.list.notes addObject:newNote];
+        [prev.list saveInBackground];
         
         [[[UIAlertView alloc] initWithTitle:@"Success!"
                                     message:@"The note is created and added to your list."

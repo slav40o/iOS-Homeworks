@@ -73,11 +73,9 @@
          show];
     }
     else{
-        List *newList = [[List alloc] initWithTitle:title andCategory:category];
+        List *newList = [[List alloc] initWithTitle:title category:category andColor:[self getColor]];
         MainViewController *prev = [self.navigationController.viewControllers objectAtIndex:0];
-        newList.color = [self getColor];
         [prev.data addList:newList];
-        
         [[[UIAlertView alloc] initWithTitle:@"Success!"
                                     message:@"The new list is created."
                                    delegate:nil

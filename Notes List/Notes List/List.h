@@ -6,10 +6,12 @@
 //  Copyright (c) 2014 Slavi. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface List : NSObject
+@interface List : PFObject<PFSubclassing>
+
++(NSString*)parseClassName;
 
 -(instancetype)initWithTitle:(NSString*)title andCategory:(NSString*)category;
 -(instancetype)initWithTitle:(NSString*)title category:(NSString*)category andColor:(UIColor*)color;
@@ -18,6 +20,8 @@
 @property NSString *title;
 @property NSString *category;
 @property NSMutableArray *notes;
-@property UIColor *color;
+@property NSString *color;
+
+-(UIColor*)getUIColor;
 
 @end

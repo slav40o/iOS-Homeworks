@@ -24,8 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setFakeData];
-    [self testParse];
+    [self fetchData];
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     self.navigationController.navigationBar.barTintColor = [UIColor purpleColor];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
@@ -57,7 +56,9 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        List *list = [data getListByIndex:indexPath.row];
         [data removeListByIndex:indexPath.row];
+        [list deleteInBackground];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
@@ -70,30 +71,27 @@
     }
     
     List *currList = [data getListByIndex:indexPath.row];
+    UIColor *color = [currList getUIColor];
     cell.titleLabel.text = currList.title;
     cell.categoryLabel.text = currList.category;
-    cell.contentView.backgroundColor = currList.color;
+    cell.contentView.backgroundColor = color;
     return cell;
 }
 
--(void)setFakeData{
+-(void)fetchData{
     data = [[ListData alloc] init];
-    List *list1 = [[List alloc] initWithTitle:@"iOS Tasks" category:@"Homework" andColor:[UIColor whiteColor]];
-    List *list2 = [[List alloc] initWithTitle:@"JS Tasks" category:@"Homework" andColor:[UIColor grayColor]];
-    [data addList:list1];
-    [data addList:list2];
-    Note *iOsNote1 = [[Note alloc] initWithTitle:@"Custom Views" andDescription:@"Do the homework for the custom views lecture."];
-    Note *iOsNote2 = [[Note alloc] initWithTitle:@"Delegates" andDescription:@"Do the homework for the delegates in iOS lecture."];
-    Note *JSsNote = [[Note alloc] initWithTitle:@"Angular" andDescription:@"Do the homework for the angular lecture."];
-    [list1.notes addObject:iOsNote1];
-    [list1.notes addObject:iOsNote2];
-    [list2.notes addObject:JSsNote];
-}
-
--(void)testParse{
-    PFObject *person = [[PFObject alloc]initWithClassName:@"Person"];
-    person[@"name"] = @"Pesho";
-    [person saveInBackground];
+    PFQuery *query = [PFQuery queryWithClassName:@"List"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            for (List *object in objects) {
+                [data addList:object];
+                [self.tableView reloadData];
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
 }
 
 @end

@@ -13,16 +13,19 @@
 
 @interface ListDetailsViewController ()
 
+@property NSMutableArray *notes;
+
 @end
 
 @implementation ListDetailsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.list.title;
+    self.titleListLabel.text = self.list.title;
     self.categoryTextLabel.text = self.list.category;
     self.doneEditBtn.hidden = YES;
-    self.tableView.separatorColor = self.list.color;
+    self.tableView.separatorColor = [self.list getUIColor];
+    self.notes = self.list.notes;
     // Do any additional setup after loading the view.
 }
 
@@ -32,7 +35,8 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.list.notes.count;
+    // return self.list.notes.count;
+    return self.notes.count;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -42,7 +46,9 @@
         cell = [[NoteViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:listCellIdentifier];
     }
     
-    Note *currNote = [self.list.notes objectAtIndex:indexPath.row];
+    // Note *currNote = [self.list.notes objectAtIndex:indexPath.row];
+    Note *currNote = [self.notes objectAtIndex:indexPath.row];
+    [currNote fetchIfNeeded];
     cell.noteTitle.text = currNote.title;
     return cell;
 }
@@ -54,7 +60,9 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Note *note = [self.list.notes objectAtIndex:indexPath.row];
         [self.list.notes removeObjectAtIndex:indexPath.row];
+        [note deleteInBackground];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
@@ -64,6 +72,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         EditNoteViewController *destViewController = (EditNoteViewController*)[segue destinationViewController];
         Note *note = [self.list.notes objectAtIndex:indexPath.row];
+        [note fetchIfNeeded];
         destViewController.note = note;
     }
 }

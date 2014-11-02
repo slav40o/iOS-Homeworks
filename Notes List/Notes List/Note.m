@@ -7,8 +7,21 @@
 //
 
 #import "Note.h"
+#import <Parse/PFObject+Subclass.h>
 
 @implementation Note
+
+@dynamic title;
+@dynamic endDate;
+@dynamic detailDescription;
+
++(void)load {
+    [self registerSubclass];
+}
+
++(NSString *)parseClassName {
+    return @"Note";
+}
 
 -(instancetype)initWithTitle:(NSString*)title andDescription:(NSString*)desc{
     self = [super init];

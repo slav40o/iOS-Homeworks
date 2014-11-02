@@ -71,6 +71,7 @@
         self.note.title = changedTitle;
         self.note.detailDescription = changedDescription;
         self.note.endDate = changedEndDate;
+        [self.note saveInBackground];
         [self changeEditMode: self];
         
         [[[UIAlertView alloc] initWithTitle:@"Success!"

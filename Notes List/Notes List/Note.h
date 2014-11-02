@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
-@interface Note : NSObject
+@interface Note : PFObject<PFSubclassing>
+
++(NSString*)parseClassName;
 
 -(instancetype)initWithTitle:(NSString*)title andDescription:(NSString*)desc;
 -(instancetype)initWithTitle:(NSString*)title description:(NSString*)desc andEndDate:(NSDate*)date;

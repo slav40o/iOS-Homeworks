@@ -35,6 +35,7 @@
 
 -(void)addList: (List*)list{
     [lists addObject:list];
+    [list saveInBackground];
 }
 
 -(void)removeList:(List*)list{
