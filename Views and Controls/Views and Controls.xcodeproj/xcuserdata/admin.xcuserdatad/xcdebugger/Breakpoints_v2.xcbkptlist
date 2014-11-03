@@ -42,13 +42,59 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Views and Controls/TabView.m"
-            timestampString = "436538675.510783"
+            timestampString = "436636381.313042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "@implementation TabView"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views and Controls/TabView.h"
+            timestampString = "436636332.846974"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "currentTabData"
+            landmarkType = "19">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TabView titleTextLabel]"
+                  moduleName = "Views and Controls"
+                  urlString = "file:///Users/admin/Desktop/iOS-Homeworks/Views%20and%20Controls/Views%20and%20Controls/TabView.h"
+                  timestampString = "436636333.010663"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TabView setTitleTextLabel:]"
+                  moduleName = "Views and Controls"
+                  urlString = "file:///Users/admin/Desktop/iOS-Homeworks/Views%20and%20Controls/Views%20and%20Controls/TabView.h"
+                  timestampString = "436636333.011913"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

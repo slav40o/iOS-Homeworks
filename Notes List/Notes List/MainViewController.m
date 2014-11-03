@@ -81,11 +81,12 @@
 -(void)fetchData{
     data = [[ListData alloc] init];
     PFQuery *query = [PFQuery queryWithClassName:@"List"];
+    __weak MainViewController *weakSelf = self;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             for (List *object in objects) {
                 [data addList:object];
-                [self.tableView reloadData];
+                [weakSelf.tableView reloadData];
             }
         } else {
             // Log details of the failure

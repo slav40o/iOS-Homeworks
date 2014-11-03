@@ -62,6 +62,7 @@
 		848BE50B1A03D6C700E983C0 /* TabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabView.m; sourceTree = "<group>"; };
 		848BE5101A04E8ED00E983C0 /* TabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabsViewController.h; sourceTree = "<group>"; };
 		848BE5111A04E8ED00E983C0 /* TabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabsViewController.m; sourceTree = "<group>"; };
+		848BE56B1A06876000E983C0 /* TabData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabData.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +110,7 @@
 				848BE4D01A03882D00E983C0 /* Controllers */,
 				848BE4AE1A0386CC00E983C0 /* AppDelegate.h */,
 				848BE4AF1A0386CC00E983C0 /* AppDelegate.m */,
+				848BE4B41A0386CC00E983C0 /* Main.storyboard */,
 				848BE4B71A0386CC00E983C0 /* Images.xcassets */,
 				848BE4AA1A0386CC00E983C0 /* Supporting Files */,
 			);
@@ -144,7 +146,6 @@
 		848BE4D01A03882D00E983C0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				848BE5091A03D65C00E983C0 /* Custom */,
 				848BE4B11A0386CC00E983C0 /* ViewController.h */,
 				848BE4B21A0386CC00E983C0 /* ViewController.m */,
 				848BE5101A04E8ED00E983C0 /* TabsViewController.h */,
@@ -176,22 +177,15 @@
 		848BE5061A03BF0800E983C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				848BE4B41A0386CC00E983C0 /* Main.storyboard */,
-				848BE4B91A0386CC00E983C0 /* LaunchScreen.xib */,
-				848BE5071A03BF2D00E983C0 /* TabView.xib */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		848BE5091A03D65C00E983C0 /* Custom */ = {
-			isa = PBXGroup;
-			children = (
 				848BE4D41A03888300E983C0 /* TableViewCell.h */,
 				848BE4D51A03888300E983C0 /* TableViewCell.m */,
 				848BE50A1A03D6C700E983C0 /* TabView.h */,
 				848BE50B1A03D6C700E983C0 /* TabView.m */,
+				848BE56B1A06876000E983C0 /* TabData.h */,
+				848BE4B91A0386CC00E983C0 /* LaunchScreen.xib */,
+				848BE5071A03BF2D00E983C0 /* TabView.xib */,
 			);
-			name = Custom;
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

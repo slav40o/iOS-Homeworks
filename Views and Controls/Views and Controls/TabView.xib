@@ -92,7 +92,7 @@
                         </mask>
                     </variation>
                 </label>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="J2Z-PG-Aqj">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2Z-PG-Aqj">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                 </scrollView>
             </subviews>

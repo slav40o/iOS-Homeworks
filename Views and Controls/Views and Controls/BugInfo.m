@@ -8,15 +8,20 @@
 
 #import "BugInfo.h"
 #import <UIKit/UIKit.h>
+#import "TabData.h"
 
 @implementation BugInfo
 
--(instancetype)initWithTitle:(NSString*)title image:(UIImage*)image andDetails:(NSString*)details{
+@synthesize image;
+@synthesize details;
+@synthesize title;
+
+-(instancetype)initWithTitle:(NSString*)bugTitle image:(UIImage*)bugImage andDetails:(NSString*)bugDetails{
     self = [super init];
     if (self) {
-        self.title = title;
-        self.image = image;
-        self.details = details;
+        self.title = bugTitle;
+        self.image = bugImage;
+        self.details = bugDetails;
     }
     
     return self;

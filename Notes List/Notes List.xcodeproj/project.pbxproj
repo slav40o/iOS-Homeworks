@@ -126,7 +126,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		84CDF3C21A016A53000C7BEE = {
+		8486BED91A077DD600948E8E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				848BE4DD1A038FA900E983C0 /* AudioToolbox.framework */,
@@ -142,6 +142,14 @@
 				848BE4D71A038EA300E983C0 /* Bolts.framework */,
 				848BE4D81A038EA300E983C0 /* Parse.framework */,
 				848BE4D91A038EA300E983C0 /* ParseFacebookUtils.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84CDF3C21A016A53000C7BEE = {
+			isa = PBXGroup;
+			children = (
+				8486BED91A077DD600948E8E /* Frameworks */,
 				84CDF3CD1A016A53000C7BEE /* Notes List */,
 				84CDF3E71A016A54000C7BEE /* Notes ListTests */,
 				84CDF3CC1A016A53000C7BEE /* Products */,

@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "BugInfo.h"
+#import "TabData.h"
 
 @interface TabView : UIView
 
-+ (id)tabViewWhitBugs:(NSMutableArray*)bugs;
++ (id)tabViewWhitData:(NSMutableArray*)data;
 
-@property NSMutableArray *bugs;
-@property BugInfo *currentBug;
+@property NSMutableArray *data;
+@property (strong, nonatomic)NSObject<TabData> *currentTabData;
 @property (weak, nonatomic) IBOutlet UILabel *titleTextLabel;
 @property (weak, nonatomic) IBOutlet UITextView *bugDescriptionTextView;
 @property (weak, nonatomic) IBOutlet UIImageView *bugImageView;

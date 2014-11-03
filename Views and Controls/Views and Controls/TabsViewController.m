@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    TabView *tabView = [TabView tabViewWhitBugs:self.bugs];
+    TabView *tabView = [TabView tabViewWhitData:self.bugs];
     [self.view addSubview:tabView];
     // Do any additional setup after loading the view.
 }
